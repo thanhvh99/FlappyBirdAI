@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c393ebf6-f9f8-4976-bf61-2cb3d97de9f3" name="Default Changelist" comment="" />
+    <list default="true" id="c393ebf6-f9f8-4976-bf61-2cb3d97de9f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/AI/Brain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/AI/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/AI/Population.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/Controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/Controller/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/Entity/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/FlappyBird/FlappyBird/Entity/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlappyBird/AI/Brain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlappyBird/AI/NeuralNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlappyBird/AI/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlappyBird/AI/Population.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlappyBird/Controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlappyBird/Controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FlappyBird/Entity/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FlappyBird/Entity/Bird.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/FlappyBirdAI" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SYAhzYCgl3sSkH3XRFsV8xyWvp" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,6 +37,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -90,5 +102,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/FlappyBirdAI" />
+    </ignored-roots>
   </component>
 </project>

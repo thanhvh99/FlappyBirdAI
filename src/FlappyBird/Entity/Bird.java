@@ -1,6 +1,6 @@
 package FlappyBird.Entity;
 
-import FlappyBird.AI.Brain;
+import FlappyBird.AI.NeuralNetwork;
 import FlappyBird.Controller.GameController;
 import FlappyBird.Main;
 import FlappyBird.Point.Point;
@@ -20,7 +20,7 @@ public class Bird implements Comparable<Bird> {
     private static final float JUMP_STRENGTH = -GRAVITY * 6.5f;
     private static final Random random = new Random();
 
-    private Brain brain;
+    private NeuralNetwork brain;
     private PointF position;
     private float velocity = 0;
     private double rotate = 0;
@@ -31,7 +31,7 @@ public class Bird implements Comparable<Bird> {
     private int color;
 
     public Bird() {
-        brain = new Brain(2, 3, 1);
+        brain = new NeuralNetwork(2, 3, 1);
         position = new PointF(POSITION_X, Main.SKY.height / 2f);
         color = random.nextInt(3);
     }
@@ -49,7 +49,7 @@ public class Bird implements Comparable<Bird> {
         return position.getX();
     }
 
-    public Brain getBrain() {
+    public NeuralNetwork getBrain() {
         return brain;
     }
 
@@ -74,7 +74,7 @@ public class Bird implements Comparable<Bird> {
         double[][] input = new double[1][2];
         input[0][0] = distanceX;
         input[0][1] = distanceY;
-        if (brain.calculateWithInput(input) > 0.5) {
+        if (brain.calculate(input) > 0.5) {
             fly();
         }
         updateTransform();
@@ -103,10 +103,7 @@ public class Bird implements Comparable<Bird> {
     private void updateTransform() {
         acceleration += GRAVITY / 60f;
         velocity += acceleration;
-        rotate = velocity / JUMP_STRENGTH * 3.14f / 4;
-        if (velocity < -JUMP_STRENGTH) {
-            rotate = -Math.PI / 4;
-        }
+        rotate = Math.max(velocity / JUMP_STRENGTH * Math.PI / 4, - Math.PI / 4);
     }
 
     public boolean isAlive() {

@@ -57,6 +57,7 @@ public class Population {
 
     public void update() {
         alive = 0;
+        currentFitness++;
         if (humanPlay) {
             for (Bird bird : birds) {
                 if (bird.isAlive()) {
@@ -79,7 +80,6 @@ public class Population {
                 }
             }
         }
-        currentFitness = birds.get(0).getFitness();
     }
 
     public void createNewGeneration() {
@@ -94,6 +94,7 @@ public class Population {
 
     public void createNextGeneration() {
         generation++;
+        currentFitness = 0;
         Collections.sort(birds);
         Bird bestBird = birds.get(0);
         if (bestBird.getFitness() > highestFitness) {
@@ -191,6 +192,7 @@ public class Population {
         birds.clear();
         Bird bird = new Bird();
         highestFitness = save.get(0).intValue();
+        currentFitness = 0;
         save.remove(0);
         bird.getBrain().decode(save);
         save.add(0, (double) highestFitness);

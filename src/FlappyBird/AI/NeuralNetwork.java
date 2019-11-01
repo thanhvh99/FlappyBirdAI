@@ -2,7 +2,7 @@ package FlappyBird.AI;
 
 import java.util.ArrayList;
 
-public class Brain {
+public class NeuralNetwork {
 
     private double[][] weight1;
     private double[][] weight2;
@@ -10,7 +10,7 @@ public class Brain {
     private int hidden;
     private int output;
 
-    public Brain(int inputNode, int hiddenNode, int outputNode) {
+    public NeuralNetwork(int inputNode, int hiddenNode, int outputNode) {
         input = inputNode;
         hidden = hiddenNode;
         output = outputNode;
@@ -32,7 +32,7 @@ public class Brain {
         }
     }
 
-    public double calculateWithInput(double[][] input) {
+    public double calculate(double[][] input) {
         double[][] hiddenInput = multiply(input, weight1);
         double[][] hiddenOutput = sigmoid(hiddenInput);
         double[][] result = sigmoid(multiply(hiddenOutput, weight2));

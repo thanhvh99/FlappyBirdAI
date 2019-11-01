@@ -32,7 +32,7 @@ public class GameController {
 
     public GameController() {
         renderer = new Renderer(this);
-        population = new Population(this, 10);
+        population = new Population(this, 5);
         initialize();
     }
 
